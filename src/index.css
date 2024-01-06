@@ -1,0 +1,153 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #eeeff0;
+}
+
+/* AnimatedText.css */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  50% {
+    width: 100%;
+  }
+
+  to {
+    width: 0;
+  }
+}
+
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+
+.animation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated-text {
+  color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  /* Add a border to simulate cursor */
+  animation: typing 8s steps(40) infinite;
+  /* Adjust the duration and steps as needed */
+}
+
+.animation-container-sm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animated-text-sm {
+  color: black;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+  /* Add a border to simulate cursor */
+  animation: typing 8s steps(40) infinite;
+  /* Adjust the duration and steps as needed */
+}
+
+.cursor {
+  animation: blink 1s infinite;
+}
+
+/* ProductCarousel.css */
+.product-carousel {
+  position: relative;
+}
+
+.carousel-container {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 4s ease-out;
+}
+
+.carousel-item {
+  width: 240px;
+  /* Display 4 items per slide */
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 1rem;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: black;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.prev-button {
+  right: 25px;
+}
+
+.next-button {
+  right: 10px;
+}
+
+
+
+.btn-add-more {
+  position: absolute;
+  top: 1rem;
+  right: 45px;
+  padding: 10px;
+  transform: translateY(-52%);
+  color: #fd9460;
+}
+
+@media screen and (max-width: 768px) {
+  .carousel-item {
+    width: 115px;
+    padding: 2px;
+    /* Display 3 items per slide on smaller screens */
+  }
+
+  .btn-add-more {
+    position: absolute;
+    top: 1rem;
+    right: 30px;
+    padding: 10px;
+    transform: translateY(-52%);
+    color: #fd9460;
+  }
+
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 1rem;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: black;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .prev-button {
+    right: 15px;
+  }
+
+  .next-button {
+    right: 1px;
+  }
+}
