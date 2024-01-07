@@ -80,7 +80,7 @@ const RecommendItems = () => {
             <div className="product-carousel my-24">
                 <div className="carousel-container">
                     <div className=''>
-                        <span className='font-bold'>Popular</span>
+                        <span className='font-bold'>Recommended</span>
                         <button className="btn-add-more" onClick={ openModal }>
                             Add More
                         </button>
