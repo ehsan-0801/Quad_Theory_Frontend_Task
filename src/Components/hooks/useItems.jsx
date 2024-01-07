@@ -11,7 +11,7 @@ const useItems = () => {
                 setItems(data.Items)
             })
     }, [])
-    return [items, loading]
+    return [items, setItems, loading]
 };
 
 export default useItems;
