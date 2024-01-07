@@ -10,7 +10,7 @@ const PopularItems = () => {
     const { state, dispatch } = useProducts();
     const { popularItems, isPopModalOpen } = state;
     // console.log("Popular Items:", popularItems);
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const [itemsPerSlide, setItemsPerSlide] = useState(5);
     const totalSlides = Math.ceil(popularItems.length / itemsPerSlide);
@@ -40,9 +40,9 @@ const PopularItems = () => {
             isPopular: true,
             isRecommended: false
         };
-        console.log("New Popular:", newProduct)
+        // console.log("New Popular:", newProduct)
         await dispatch({ type: 'ADD_POPULAR_PRODUCT', payload: newProduct });
-
+        reset()
         closeModal();
     };
     useEffect(() => {

@@ -10,7 +10,7 @@ const RecommendItems = () => {
     const { recommendedItems, isModalOpen } = state;
     // console.log("Recommended Items:", recommendedItems);
 
-    const { register, formState: { errors }, handleSubmit } = useForm();
+    const { register, formState: { errors }, handleSubmit, reset } = useForm();
 
     const [itemsPerSlide, setItemsPerSlide] = useState(5);
     const totalSlides = Math.ceil(recommendedItems.length / itemsPerSlide);
@@ -42,7 +42,7 @@ const RecommendItems = () => {
         };
         // console.log("New Popular:", newProduct)
         await dispatch({ type: 'ADD_RECOMMENDED_PRODUCT', payload: newProduct });
-
+        reset()
         closeModal(); // Close the modal after adding the product
     };
 
