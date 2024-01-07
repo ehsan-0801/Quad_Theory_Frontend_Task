@@ -22,3 +22,6 @@ In this task:
 [
 If you could check this by cloning my repository that would be better.
 ]
+
+![Web](./src/assets/web.png)
+![Mobile](./src/assets/mob.png)
