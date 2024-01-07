@@ -17,6 +17,7 @@ In this task:
 - The state management for the different parts has been done using context api
 - New items has been added using form inside a modal for both popular and recommended items separately
 - In the form Name, Price and ImageUrl can be added.
+- also react hook form has been used to validate the input
 
 [
 If you could check this by cloning my repository that would be better.
